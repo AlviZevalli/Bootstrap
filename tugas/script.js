@@ -4,7 +4,7 @@ var fields = [];
 function buatFields() {
   numFields = document.getElementById("numFields").value;
   var container = document.getElementById("fieldsContainer");
-  container.innerHTML = "Jumlah Field Terbentuk : " + numFields;
+  container.innerHTML = "Masukkan " + numFields + " hobi anda :";
 
   for (var i = 0; i < numFields; i++) {
     if (!fields[i]) {
@@ -19,6 +19,7 @@ function buatFields() {
 
   var button = document.createElement("button");
   button.innerHTML = "OK";
+  button.type = "button";
 
   var body = document.getElementsByTagName("body")[0];
   container.appendChild(document.createElement("br"));
@@ -66,6 +67,7 @@ function buatFields() {
         }
       }
       var nama = document.getElementById("fname").value;
+      var email = document.getElementById("email").value
       var jml = document.getElementById("numFields").value;
       var pilihan = "";
       for (var i = 0; i < numFields; i++) {
@@ -79,6 +81,8 @@ function buatFields() {
         var hasil =
           "Hallo, nama saya " +
           nama +
+          ", dengan email " +
+          email +
           ", saya mempunyai sejumlah " +
           jml +
           " pilihan yaitu " +
